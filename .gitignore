@@ -1,0 +1,42 @@
+# Secrets and environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+*.env
+.env.backup
+.env.sample
+
+# Private keys, certificates, and keystores
+*.pem
+*.key
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pkcs12
+*.der
+signing-key.json
+*.json.enc
+
+# Sensitive configuration files and API keys
+credentials.json
+client_secret.json
+google-services.json
+local.properties
+secrets.properties
+secrets.xml
+
+# Python virtual environments (found in workspace root)
+.venv/
+venv/
+ENV/
+env/
+
+# IDE and system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
