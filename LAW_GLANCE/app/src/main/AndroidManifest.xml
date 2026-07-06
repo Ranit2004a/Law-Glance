@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ywinked">
+
+    <!-- Add INTERNET permission here -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+
+        <!-- Welcome Activity -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <!-- Waiting Approval Activity -->
+        <activity
+            android:name=".WaitingApprovalActivity"
+            android:exported="false" />
+
+        <!-- Lawyer Dashboard Activity -->
+        <activity
+            android:name=".LawyerDashboardActivity"
+            android:exported="false" />
+
+        <!-- Lawyer Settings Activity -->
+        <activity
+            android:name=".LawyerSettingsActivity"
+            android:exported="false" />
+
+        <!-- Lawyer Pending Requests Activity -->
+        <activity
+            android:name=".LawyerPendingRequestsActivity"
+            android:exported="false" />
+
+        <!-- Lawyer Today's Appointments Activity -->
+        <activity
+            android:name=".LawyerTodayAppointmentsActivity"
+            android:exported="false" />
+
+        <!-- Admin Dashboard Activity -->
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+
+        <!-- Admin Settings Activity -->
+        <activity
+            android:name=".AdminSettingsActivity"
+            android:exported="false" />
+
+        <!-- User Settings Activity -->
+        <activity
+            android:name=".UserSettingsActivity"
+            android:exported="false" />
+
+        <!-- search rights -->
+        <activity
+            android:name=".RightsSearchActivity"
+            android:exported="false" />
+
+
+        <!-- Legal Chatbot Activity -->
+        <activity
+            android:name=".LegalChatbotActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" /> <!-- Important to move input bar above keyboard -->
+
+        <!-- Main Activity (Launcher) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Book a Lawyer Activity -->
+        <activity
+            android:name=".BookLawyerActivity"
+            android:exported="false" />
+
+        <!-- Legal Documents Activity -->
+        <activity
+            android:name=".LegalDocumentsActivity"
+            android:exported="false" />
+
+        <!-- Document Generator Activity -->
+        <activity
+            android:name=".DocumentGeneratorActivity"
+            android:exported="false" />
+
+        <!-- Court Reminders Activity -->
+        <activity
+            android:name=".CourtRemindersActivity"
+            android:exported="false" />
+
+        <!-- Broadcast Receiver for Alarms -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
+
+
+

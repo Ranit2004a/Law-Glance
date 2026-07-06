@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- When pressed (clicked inside) -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#333333" /> <!-- Slightly lighter gray when pressed -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+    <!-- When focused (cursor inside) -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#333333" /> <!-- Same as pressed -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+    <!-- Default state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#222222" /> <!-- Default dark gray -->
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+</selector>

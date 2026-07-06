@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0F0F15">
+
+    <!-- Top Action Bar -->
+    <RelativeLayout
+        android:id="@+id/adminTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#00000000"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Logo/Title -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="130dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Logo"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/your_logo_image" />
+
+        <!-- Notification Bell & Avatar Layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Notification Bell with Dot -->
+            <RelativeLayout
+                android:id="@+id/btnNotificationBell"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_bell_vector"
+                    android:contentDescription="Notifications" />
+
+                <!-- Bell Dot -->
+                <View
+                    android:id="@+id/viewBellDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/circle_bg"
+                    android:backgroundTint="#FF9F0A"/>
+            </RelativeLayout>
+
+            <!-- Admin Avatar Circle -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnAdminAvatar"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#2A1B0A"
+                android:clickable="true"
+                android:focusable="true">
+                <ImageView
+                    android:id="@+id/ivAdminProfilePic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:contentDescription="Profile Picture"/>
+
+                <TextView
+                    android:id="@+id/tvAdminInitial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textColor="#FF9F0A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Scrollable content to allow bottom navigation to sit nicely -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/adminTopBar"
+        app:layout_constraintBottom_toTopOf="@id/adminBottomNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- Stats Section -->
+            <LinearLayout
+                android:id="@+id/layoutStats"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+
+                <!-- Stat: Clients -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/card_border_dark"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_people_vector"
+                        android:contentDescription="Clients Icon"
+                        app:tint="#FF8C00"/>
+
+                    <TextView
+                        android:id="@+id/tvCountUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="CLIENTS"
+                        android:textColor="#8E8E9F"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"/>
+                </LinearLayout>
+
+                <!-- Stat: Lawyers -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/card_border_dark"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_temple_vector"
+                        android:contentDescription="Lawyers Icon"
+                        app:tint="#FF8C00"/>
+
+                    <TextView
+                        android:id="@+id/tvCountLawyers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="LAWYERS"
+                        android:textColor="#8E8E9F"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"/>
+                </LinearLayout>
+
+                <!-- Stat: Bookings -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border_dark"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_calendar_vector"
+                        android:contentDescription="Bookings Icon"
+                        app:tint="#FF8C00"/>
+
+                    <TextView
+                        android:id="@+id/tvCountAppointments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="BOOKINGS"
+                        android:textColor="#8E8E9F"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tab Selector Container -->
+            <LinearLayout
+                android:id="@+id/layoutTabs"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:background="@drawable/card_border_dark"
+                android:layout_marginTop="20dp"
+                android:padding="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTabLawyers"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="LAWYERS"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#FF8C00"
+                    app:cornerRadius="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTabUsers"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="CLIENTS"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#8E8E9F"
+                    app:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTabAppointments"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="BOOKINGS"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#8E8E9F"
+                    app:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="10dp"/>
+            </LinearLayout>
+
+            <!-- Search and Filter Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <!-- Search Input Box -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_border_dark"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <ImageView
+                        android:id="@+id/ivSearchIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_search_vector"
+                        android:contentDescription="Search Icon"
+                        app:tint="#8E8E9F"/>
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/ivSearchIcon"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Search..."
+                        android:textColorHint="#4A4A5A"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:imeOptions="actionSearch"/>
+                </RelativeLayout>
+
+                <!-- Filter Settings Button -->
+                <RelativeLayout
+                    android:id="@+id/btnFilter"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/card_border_dark"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_filter_vector"
+                        android:contentDescription="Filter Button"
+                        app:tint="#8E8E9F"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Main Recycler View -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAdminContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <!-- Empty State / Conditional Dashed Placeholder -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dashed_border"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="28dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivEmptyStateIcon"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/ic_empty_person_vector"
+                    android:contentDescription="Empty state icon"
+                    app:tint="#2E2E3E"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyStateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="No other lawyers registered in this segment"
+                    android:textColor="#8E8E9F"
+                    android:textSize="13sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- System Reference Indicator -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="SYSTEM REFERENCE"
+                android:textColor="#262635"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/adminBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#09090F"
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Bottom Nav: Dashboard -->
+        <LinearLayout
+            android:id="@+id/navItemDashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivNavDashboard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_grid_vector"
+                android:contentDescription="Dashboard Navigation"
+                app:tint="#FF8C00"/>
+
+            <TextView
+                android:id="@+id/tvNavDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="DASHBOARD"
+                android:textColor="#FF8C00"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Bottom Nav: Lawyers -->
+        <LinearLayout
+            android:id="@+id/navItemLawyers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivNavLawyers"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_temple_vector"
+                android:contentDescription="Lawyers Navigation"
+                app:tint="#8E8E9F"/>
+
+            <TextView
+                android:id="@+id/tvNavLawyers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="LAWYERS"
+                android:textColor="#8E8E9F"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Bottom Nav: Clients -->
+        <LinearLayout
+            android:id="@+id/navItemClients"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivNavClients"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_people_vector"
+                android:contentDescription="Clients Navigation"
+                app:tint="#8E8E9F"/>
+
+            <TextView
+                android:id="@+id/tvNavClients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="CLIENTS"
+                android:textColor="#8E8E9F"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Bottom Nav: Bookings -->
+        <LinearLayout
+            android:id="@+id/navItemBookings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivNavBookings"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_calendar_vector"
+                android:contentDescription="Bookings Navigation"
+                app:tint="#8E8E9F"/>
+
+            <TextView
+                android:id="@+id/tvNavBookings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="BOOKINGS"
+                android:textColor="#8E8E9F"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,457 @@
+[
+  {
+    "category": "IPC",
+    "title": "Helmet Violation",
+    "description": "Penalty for not wearing a helmet while riding a two-wheeler",
+    "cause": "Riding without helmet",
+    "punishment": "₹100 fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Drunk Driving",
+    "description": "Penalty for driving under influence of alcohol",
+    "cause": "Driving under influence",
+    "punishment": "₹2000 fine + license suspension"
+  },
+  {
+    "category": "IPC",
+    "title": "Theft",
+    "description": "Laws related to theft offences",
+    "cause": "Stealing property",
+    "punishment": "Imprisonment 3 yrs / Fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Assault",
+    "description": "Penalty for causing physical harm to another person",
+    "cause": "Physical harm",
+    "punishment": "Imprisonment 1-3 yrs / Fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Murder",
+    "description": "Penalty for unlawful killing",
+    "cause": "Intentional killing",
+    "punishment": "Life imprisonment / Death penalty"
+  },
+  {
+    "category": "IPC",
+    "title": "Cheating",
+    "description": "Fraudulent activity causing loss to another person",
+    "cause": "Deception causing loss",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Forgery",
+    "description": "Altering documents illegally",
+    "cause": "Falsifying documents",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Kidnapping",
+    "description": "Unlawful taking of a person against their will",
+    "cause": "Kidnapping for ransom",
+    "punishment": "Imprisonment 7 yrs / Fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Criminal Trespass",
+    "description": "Entry into property without permission",
+    "cause": "Trespassing private property",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "IPC",
+    "title": "Defamation",
+    "description": "Harming reputation of another person",
+    "cause": "Spreading false information",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Domestic Violence Act",
+    "description": "Protection for women from domestic abuse",
+    "cause": "Domestic violence",
+    "punishment": "Imprisonment 1-3 yrs / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Sexual Harassment at Workplace",
+    "description": "Protection against harassment at workplace",
+    "cause": "Workplace harassment",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Dowry Prohibition",
+    "description": "Prohibition of dowry demands",
+    "cause": "Dowry demand or giving",
+    "punishment": "Imprisonment 6 months-5 yrs / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Child Marriage Act",
+    "description": "Prohibition of child marriage",
+    "cause": "Marrying underage girl",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Maternity Benefit Act",
+    "description": "Rights for women at workplace during pregnancy",
+    "cause": "Denial of maternity leave",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Women",
+    "title": "Sexual Assault",
+    "description": "Protection against sexual assault",
+    "cause": "Assaulting a woman sexually",
+    "punishment": "Imprisonment 3-7 yrs / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Rape Laws",
+    "description": "Strict punishment for rape offenses",
+    "cause": "Rape",
+    "punishment": "Imprisonment 7 yrs to life / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Acid Attack Prevention",
+    "description": "Protection from acid attacks",
+    "cause": "Acid attack",
+    "punishment": "Imprisonment 10 yrs / Fine"
+  },
+  {
+    "category": "Women",
+    "title": "Right to Work Safely",
+    "description": "Protection of women at workplace",
+    "cause": "Unsafe work environment",
+    "punishment": "Fine / Penalty"
+  },
+  {
+    "category": "Women",
+    "title": "Protection from Stalking",
+    "description": "Legal action against stalking",
+    "cause": "Harassment by stalking",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Cyberstalking",
+    "description": "Unlawful online harassment",
+    "cause": "Stalking online",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Phishing Fraud",
+    "description": "Protection from fraudulent emails/websites",
+    "cause": "Phishing attempt",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Hacking",
+    "description": "Unauthorized access to computer systems",
+    "cause": "Hacking computer",
+    "punishment": "Imprisonment 3 yrs / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Identity Theft",
+    "description": "Illegal use of personal data",
+    "cause": "Stealing identity",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Online Defamation",
+    "description": "Defaming someone online",
+    "cause": "Defamatory post",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Cyber Terrorism",
+    "description": "Acts of terrorism using digital means",
+    "cause": "Threatening acts online",
+    "punishment": "Life imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Illegal Content Sharing",
+    "description": "Sharing illegal or pornographic content online",
+    "cause": "Posting illegal content",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Social Media Abuse",
+    "description": "Harassment via social media platforms",
+    "cause": "Online abuse or threats",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Cyber",
+    "title": "Data Privacy Violation",
+    "description": "Violation of personal data privacy",
+    "cause": "Misusing personal data",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Cyber",
+    "title": "Cyberbullying",
+    "description": "Bullying someone using digital means",
+    "cause": "Online bullying",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Tenant",
+    "title": "Rent Control Act",
+    "description": "Protection of tenants against arbitrary eviction",
+    "cause": "Illegal eviction",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Tenant",
+    "title": "Security Deposit",
+    "description": "Rights related to return of security deposit",
+    "cause": "Not returning deposit",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Tenant",
+    "title": "Maintenance Charges",
+    "description": "Regulates maintenance charges collection",
+    "cause": "Overcharging maintenance",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Tenant",
+    "title": "Eviction Notice",
+    "description": "Proper notice required before eviction",
+    "cause": "No notice given",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Tenant",
+    "title": "Tenancy Agreement",
+    "description": "Legal recognition of rental agreement",
+    "cause": "Violation of agreement",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Tenant",
+    "title": "Right to Livable Housing",
+    "description": "Safe and livable housing for tenants",
+    "cause": "Unsafe housing",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Tenant",
+    "title": "Rent Receipts",
+    "description": "Landlord must provide rent receipts",
+    "cause": "No receipt given",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Tenant",
+    "title": "Right to Complain",
+    "description": "Tenants can file complaints against landlord",
+    "cause": "Ignoring complaints",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Tenant",
+    "title": "Privacy Rights",
+    "description": "Landlords cannot enter without notice",
+    "cause": "Illegal entry",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Tenant",
+    "title": "Lease Renewal Rights",
+    "description": "Tenant right for renewing lease",
+    "cause": "Refusal without valid reason",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Seatbelt Law",
+    "description": "Mandatory seatbelt usage for drivers and front-seat passengers",
+    "cause": "Not wearing seatbelt",
+    "punishment": "₹100 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Speeding",
+    "description": "Penalty for exceeding speed limits",
+    "cause": "Over-speeding",
+    "punishment": "₹500-₹2000 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Red Light Violation",
+    "description": "Penalty for ignoring red traffic signals",
+    "cause": "Crossing red light",
+    "punishment": "₹1000 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Parking Violation",
+    "description": "Improper parking penalties",
+    "cause": "Illegal parking",
+    "punishment": "₹200-₹500 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Driving License Violation",
+    "description": "Driving without license",
+    "cause": "No valid license",
+    "punishment": "₹500 fine / Vehicle seizure"
+  },
+  {
+    "category": "Traffic",
+    "title": "No Helmet Passenger",
+    "description": "Passenger not wearing helmet",
+    "cause": "Riding without helmet",
+    "punishment": "₹100 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Overloading Vehicle",
+    "description": "Carrying excess passengers or load",
+    "cause": "Overloading",
+    "punishment": "₹500 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Signal Jumping",
+    "description": "Jumping traffic signals",
+    "cause": "Ignoring traffic signal",
+    "punishment": "₹1000 fine"
+  },
+  {
+    "category": "Traffic",
+    "title": "Wrong Side Driving",
+    "description": "Driving against traffic rules",
+    "cause": "Driving wrong side",
+    "punishment": "₹500 fine / Penalty points"
+  },
+  {
+    "category": "Traffic",
+    "title": "No Vehicle Insurance",
+    "description": "Penalty for driving uninsured vehicle",
+    "cause": "No valid insurance",
+    "punishment": "₹2000 fine"
+  },
+  {
+    "category": "Consumer",
+    "title": "Consumer Protection Act",
+    "description": "Protection against defective goods and services",
+    "cause": "Defective product/service",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Consumer",
+    "title": "E-commerce Refund Rights",
+    "description": "Right to refund from online purchases",
+    "cause": "Refund refusal",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Consumer",
+    "title": "Unfair Trade Practices",
+    "description": "Protection against misleading ads or scams",
+    "cause": "Fraudulent ad",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Consumer",
+    "title": "Food Safety Act",
+    "description": "Ensures safe and hygienic food",
+    "cause": "Unsanitary food",
+    "punishment": "Fine / Imprisonment"
+  },
+  {
+    "category": "Consumer",
+    "title": "Packaging & Labeling",
+    "description": "Correct labeling required on products",
+    "cause": "Wrong labeling",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Consumer",
+    "title": "Defective Electronics",
+    "description": "Protection against faulty electronics",
+    "cause": "Defective product",
+    "punishment": "Replacement / Compensation"
+  },
+  {
+    "category": "Consumer",
+    "title": "Unfair Billing",
+    "description": "Protection against overcharging",
+    "cause": "Excess billing",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Consumer",
+    "title": "Warranty Rights",
+    "description": "Consumer can claim warranty on products",
+    "cause": "Warranty denied",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Consumer",
+    "title": "Right to Safe Food",
+    "description": "Protection against adulterated food",
+    "cause": "Unsafe food",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Consumer",
+    "title": "Online Consumer Complaint",
+    "description": "File complaint against online seller",
+    "cause": "Complaint ignored",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Others",
+    "title": "Right to Information",
+    "description": "Access to government records",
+    "cause": "Denial of information",
+    "punishment": "Fine / Compensation"
+  },
+  {
+    "category": "Others",
+    "title": "Environment Protection Act",
+    "description": "Protection of environment",
+    "cause": "Polluting environment",
+    "punishment": "Imprisonment / Fine"
+  },
+  {
+    "category": "Others",
+    "title": "Right to Education",
+    "description": "Education for children 6-14 yrs",
+    "cause": "Denial of education",
+    "punishment": "Compensation / Fine"
+  },
+  {
+    "category": "Others",
+    "title": "Freedom of Speech",
+    "description": "Right to express opinions freely",
+    "cause": "Censorship / Threat",
+    "punishment": "Fine / Legal action"
+  },
+  {
+    "category": "Others",
+    "title": "Consumer Helpline",
+    "description": "Right to approach consumer grievance redressal",
+    "cause": "Complaint ignored",
+    "punishment": "Compensation / Fine"
+  }
+]

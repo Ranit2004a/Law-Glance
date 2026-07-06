@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#CC1F1F2E">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtCaseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Case Title"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btnDelete"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/txtCourtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Court Name"
+            android:textColor="#FF9F0A"
+            android:textSize="13sp"
+            android:layout_below="@id/txtCaseTitle"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btnDelete"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/txtDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hearing Details"
+            android:textColor="#BCBCC4"
+            android:textSize="12sp"
+            android:layout_below="@id/txtCourtName"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btnDelete"
+            android:layout_marginEnd="12dp"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:text="Delete"
+            android:textColor="#FF453A"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
