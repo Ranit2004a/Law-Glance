@@ -1,0 +1,78 @@
+# ══════════════════════════════════════════════════════════════════════════════
+#  Law Glance – Docker Compose
+#  Services:
+#    1. gemini_service  – FastAPI backend (Python)
+#    2. android_build   – Android Gradle build (produces APK as an artifact)
+# ══════════════════════════════════════════════════════════════════════════════
+
+name: law-glance
+
+services:
+
+  # ── 1. Gemini FastAPI Service ───────────────────────────────────────────────
+  gemini_service:
+    build:
+      context: ./gemini_service
+      dockerfile: Dockerfile
+    image: law-glance/gemini-service:latest
+    container_name: gemini_service
+    restart: unless-stopped
+
+    # Load secrets from .env (never commit this file)
+    env_file:
+      - ./gemini_service/.env
+
+    # Optional: override individual env vars (takes precedence over .env file)
+    environment:
+      - GEMINI_MODEL=gemini-2.5-flash
+
+    ports:
+      - "8000:8000"          # FastAPI  →  http://localhost:8000
+
+    networks:
+      - law-glance-net
+
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+
+  # ── 2. Android Build Service ────────────────────────────────────────────────
+  android_build:
+    build:
+      context: ./LAW_GLANCE
+      dockerfile: Dockerfile
+      # Pass OPENAI_API_KEY as a build-arg from host environment
+      args:
+        OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      # Target the 'export' stage so the final image is minimal
+      target: export
+    image: law-glance/android-build:latest
+    container_name: android_build
+
+    # Mount a local directory to extract the APK after build
+    volumes:
+      - ./output/apk:/output
+
+    # Run once: copy APK to mounted volume, then exit
+    command: sh -c "cp /output/law-glance-debug.apk /output/ && echo '✅ APK exported to ./output/apk/'"
+
+    networks:
+      - law-glance-net
+
+    # Only build on explicit `docker compose run android_build`
+    profiles:
+      - build
+
+# ── Networks ───────────────────────────────────────────────────────────────────
+networks:
+  law-glance-net:
+    driver: bridge
+
+# ── Volumes ────────────────────────────────────────────────────────────────────
+volumes:
+  gradle_cache:
+    driver: local

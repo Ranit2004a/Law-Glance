@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+
+# Git
+.git/
+.gitignore
+
+# Secrets (inject via env_file / env vars at runtime)
+.env
