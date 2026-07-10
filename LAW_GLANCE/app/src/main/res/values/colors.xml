@@ -11,6 +11,7 @@
     <color name="colorOnSecondary">#000000</color>
     <color name="orange_primary">#FF8C00</color>
     <color name="slate_border">#2D2D37</color>
+    <color name="ic_launcher_background">#0D1B3E</color>
 </resources>
 
 

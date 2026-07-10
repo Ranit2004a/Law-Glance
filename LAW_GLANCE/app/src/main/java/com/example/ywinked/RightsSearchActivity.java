@@ -313,7 +313,7 @@ public class RightsSearchActivity extends AppCompatActivity {
 
         okhttp3.MediaType JSON = okhttp3.MediaType.get("application/json; charset=utf-8");
         okhttp3.RequestBody body = okhttp3.RequestBody.create(jsonBody.toString(), JSON);
-        String url = "http://" + NetworkConfig.BACKEND_IP + ":8000/query"; // Call FastAPI directly on port 8000
+        String url = NetworkConfig.BASE_URL + "/query"; // Call FastAPI via Cloudflare tunnel
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .connectTimeout(30, java.util.concurrent.TimeUnit.SECONDS)

@@ -234,7 +234,7 @@ public class LegalChatbotActivity extends AppCompatActivity {
         jsonBody.addProperty("query", userMessage); // FastAPI expects "query"
 
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
-        String url = "http://" + NetworkConfig.BACKEND_IP + ":8000/query"; // Call FastAPI directly on port 8000
+        String url = NetworkConfig.BASE_URL + "/query"; // Call FastAPI via Cloudflare tunnel
 
         Request request = new Request.Builder()
                 .url(url)
